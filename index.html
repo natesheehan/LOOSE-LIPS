@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://i1.sndcdn.com/avatars-C6z0Vyr2LPCI6uHm-ZLN5qA-t200x200.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOOSE-LIPS</title>
+  </head>
+  <body>
+
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active" style="float: left;">LOOSE LIPS</a>
+      <a href="#news">Mixes</a>
+      <a href="#contact">Events</a>
+      <a href="#about">Crew</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="search-wrapper">
+      <label for="search">Search Mixes</label>
+      <input type="search" id="search" data-search>
+    </div>
+    <div class="user-cards" data-user-cards-container></div>
+    <template data-user-template>
+      <div class="card">
+        <div class="header" data-header></div>
+        <div class="body" data-body></div>
+        <img src="" alt="" data-img class="mix-img">
+        <div class="text" data-text></div>
+        <button id="btn">Read more</button>
+        <button type="button" class="btn btn-default btn-sm" id="play-button">
+          <span class="glyphicon glyphicon-play"></span> Play
+        </button>
+      </div>
+    </template>
+
+    <div id="audio">
+      <video id ="video" controls poster='https://i1.sndcdn.com/avatars-C6z0Vyr2LPCI6uHm-ZLN5qA-t200x200.jpg'>
+        <source src='https://github.com/natesheehan/looselips-material/blob/main/LL024%20SNIPPETS%20-%20Dan%20Ellis%20-%20E330%20EP%20(w_%20Ben%20Pest%20remix).mp3?raw=true' type= 'audio/mp3'>
+    </video>
+    </div>
+
+    <script type="module" src="public/js/main.js"></script>
+  </body>
+</html>
