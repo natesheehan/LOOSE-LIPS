@@ -33,6 +33,7 @@ fetch("../data/data.json")
 
 
       userCardContainer.append(card)
+      
       return {
         name: user.name,
         email: user.date,
@@ -41,6 +42,7 @@ fetch("../data/data.json")
       }
     })
   })
+
 
 function waitForElm(selector) {
   return new Promise(resolve => {
