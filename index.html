@@ -1,52 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="https://i1.sndcdn.com/avatars-C6z0Vyr2LPCI6uHm-ZLN5qA-t200x200.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOOSE-LIPS</title>
-  </head>
-  <body>
+    <title>LOOSE LIPS</title>
+</head>
 
-    
-    <div class="topnav" id="myTopnav">
-      <a href="#home" class="active" style="float: left;">LOOSE LIPS</a>
-      <a href="#news">Mixes</a>
-      <a href="#contact">Events</a>
-      <a href="#about">Crew</a>
-      <a href="#about">Blog</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
+<body>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo-section" class="nav-section">
+            <a href="#">
+                <h1>LOOSE LIPS</h1>
+            </a>
+        </div>
+        <div id="nav-mobile-section">
+            <div id="nav-link-section" class="nav-section">
+                <a href="#">BLOG</a>
+                <a href="#">CREW</a>
+                <a href="#">EVENTS</a>
+                <a href="#">MIXES</a>
+            </div>
+            <div id="nav-social-section" class="nav-section">
+                <a href="https://www.instagram.com/looselipsevents/?hl=en-gb">
+                    <img src="public/data/insta.svg" class="fa-brands fa-twitter" alt=""
+                        style="height: 2em;width: 2em;filter: invert();">
+                </a>
+                <a href="https://soundcloud.com/loose-lips123" target="_blank">
+                    <img src="public/data/soundcloud.svg" class="fa-brands fa-youtube"
+                        style="height: 2em;width: 2em;filter: invert();" alt="">
+                </a>
+                <a href="#">
+                    <img src="public/data/mixc.svg" style="height: 2em;width: 2em;filter: invert();" alt="">
 
-    <div class="search-wrapper">
-      <label for="search" data-text="search" class="search">Search</label>
-      <input type="search" id="search" data-search>
-    </div>
-    <div class="user-cards" data-user-cards-container></div>
-    <template data-user-template>
-      <div class="card">
-        <div class="header" data-header></div>
-        <div class="body" data-body></div>
-        <img src="" alt="" data-img class="mix-img">
-        <div class="text" data-text></div>
-        <button id="btn">Read more</button>
-        <button type="button" class="btn btn-default btn-sm" id="play-button">
-          <span class="glyphicon glyphicon-play"></span> Play
+                </a>
+            </div>
+            <div id="nav-contact-section" class="nav-section">
+                <a href="#">HIT US UP</a>
+            </div>
+        </div>
+        <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+            <span>Menu</span>
+            <i class="fa-solid fa-bars"></i>
         </button>
+    </nav>
+
+  
+    <main>
+        <article data-index="0" data-status="active">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    Loose Lips are delighted to present our label’s 24th expedition, E330 EP - a colourful blend of melody, mystery and madness from Merseyside-raised producer, @danellismusic. A rubbery 6-track audial adventure, complementing LL’s lifelong love for all things braindance.
+
+The release includes 5 originals spanning killer breaks, jubilant IDM, gasping ambience, hyperpop-impacted electronica and maundering acid…then accompanied by 1 fierce technoid remix from a LL firm favourite and raucous music maker, @benpest .
+                </p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>LL024 SNIPPETS - Dan Ellis - E330 EP (w/ Ben Pest remix)</h2>
+                <img src="public/data/play.svg" style="height: 4em;width: 4em;filter: invert();scale: 1.5;margin-right: 4em;" class="play-featured" alt="">
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <img src="public/data/left.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <img src="public/data/right.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+            </div>
+        </article>
+
+        <article data-index="1" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>Yung Will presents the Loose Lips show, 60 mins of miscellaneous tracks from artists we rate - new music from P1Caps, 10secondbeats, Korzi, LCY and more. Followed by a 60 minute sad boi/cloud rap/emo trap mix from Yung Will. Keep it Loose.</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Loose Lips w/Yung Will 01-12-22 (Reform Radio)</h2>
+                <img src="public/data/play.svg" style="height: 4em;width: 4em;filter: invert();scale: 1.5;margin-right: 4em;" class="play-featured" alt="">
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <img src="public/data/left.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <img src="public/data/right.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+            </div>
+        </article>
+
+        <article data-index="2" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>Loose Lips returns with an hour special from b.lo - A real saucy selector.</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Loose Lips w/ b.lo 19-05-22 (Reform Radio)</h2>
+                <img src="public/data/play.svg" style="height: 4em;width: 4em;filter: invert();scale: 1.5;margin-right: 4em;" class="play-featured" alt="">
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <img src="public/data/left.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <img src="public/data/right.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+            </div>
+        </article>
+
+
+        <article data-index="3" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    Nobody move nobody get scared! The Loose Lips show has been taken over! Not one but 4 of our favourite selectors are in the studio for the entire 2 hours and it's starting to heat up. Somebody call the fire brigade.
+                </p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Loose Lips w/FKA Hardcore, Soyboi, Chande & Salt Pillar 03-11-22 (Reform Radio)</h2>
+                <img src="public/data/play.svg" style="height: 4em;width: 4em;filter: invert();scale: 1.5;margin-right: 4em;" class="play-featured" alt="">
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <img src="public/data/left.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <img src="public/data/right.svg" class="fa-light fa-arrow-left-long" style="filter: invert();" alt="">
+                </button>
+            </div>
+        </article>
+
+
+
+
+    </main>
+
+  
+
+    <!-- <div class="search-wrapper">
+      <h1 style="text-align: center;font-weight: bolder;">MIX DISCOGRAPHY</h1>
+        <label for="search" data-text="search" class="search">Search</label>
+        <input type="search" id="search" data-search>
       </div>
-    </template>
+  
+       -->
+       
+      <div class="user-cards" data-user-cards-container><h1 style="text-align: center;font-weight: bolder;margin-top: 2.5em;">LOOSE LIPS SELECTION</h1></div>
+      <img src="public/data/scroll.png" class="scroll-img" alt="">
+      <hr/>
+      
+      <template data-user-template>
+        <div class="card">
+          <div class="header" data-header></div>
+          <div class="body" data-body></div>
+          <img src="" alt="" data-img class="mix-img">
+          <div class="text" data-text></div>
+          <div class="labels" data-label></div>
+        </div>
+      </template>
 
-    <div id="audio">
-      <video id ="video" controls poster='https://i1.sndcdn.com/avatars-C6z0Vyr2LPCI6uHm-ZLN5qA-t200x200.jpg'>
-        <source src='https://github.com/natesheehan/looselips-material/blob/main/LL024%20SNIPPETS%20-%20Dan%20Ellis%20-%20E330%20EP%20(w_%20Ben%20Pest%20remix).mp3?raw=true' type= 'audio/mp3'>
-    </video>
-    </div>
 
-    <script type="module" src="public/js/main.js"></script>
-  </body>
+      <h1>LOOSE LIPS EVENTS</h1>
+<div class="event-cards" data-event-cards-container></div>
+
+      <template data-events-template>
+        <div class="event-card">
+          <div class="event-name" data-eventname></div>
+          <div class="event-date" data-eventdate></div>
+          <div class="event-artists" data-eventartist></div>
+          <div class="event-location" data-eventlocation></div>
+          <img src="" alt="" class="mix-img" data-eventimg>
+        </div>
+      </template>
+
+      <hr/>
+</body>
+<script type="module" src="public/js/main.js"></script>
+<script>
+  
+    /* -- Carousel Navigation -- */
+
+    let activeIndex = 0;
+
+    const slides = document.getElementsByTagName("article");
+
+    const handleLeftClick = () => {
+        const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
+
+        const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+            nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+
+        currentSlide.dataset.status = "after";
+
+        nextSlide.dataset.status = "becoming-active-from-before";
+
+        setTimeout(() => {
+            nextSlide.dataset.status = "active";
+            activeIndex = nextIndex;
+        });
+    }
+
+    const handleRightClick = () => {
+        const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
+
+        const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+            nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+
+        currentSlide.dataset.status = "before";
+
+        nextSlide.dataset.status = "becoming-active-from-after";
+
+        setTimeout(() => {
+            nextSlide.dataset.status = "active";
+            activeIndex = nextIndex;
+        });
+    }
+
+    /* -- Mobile Nav Toggle -- */
+
+    const nav = document.querySelector("nav");
+
+    const handleNavToggle = () => {
+        nav.dataset.transitionable = "true";
+
+        nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
+    }
+
+    window.matchMedia("(max-width: 800px)").onchange = e => {
+        nav.dataset.transitionable = "false";
+
+        nav.dataset.toggled = "false";
+    };
+</script>
+
 </html>
