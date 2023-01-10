@@ -59,13 +59,11 @@ fetch("../data/events.json")
       
       const e_name = event_card.querySelector("[data-eventname]")
       const e_date = event_card.querySelector("[data-eventdate]")
-      const e_artist = event_card.querySelector("[data-eventartist]")
       const e_location = event_card.querySelector("[data-eventlocation]")
       const e_img = event_card.querySelector("[data-eventimg]")
 
       e_name.textContent = event.name
       e_date.textContent = event.date
-      e_artist.textContent = event.artists
       e_location.textContent = event.location
       e_img.src = event.img
 
